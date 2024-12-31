@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Angel{
+            background-image: url(bg.webp);
+            /* color: rgb(6, 187, 187); */
+            height:500px;
+            width: 20%;
+            border-radius: 10px;
+            margin-top: 10%;
+            border: 5px solid black;
+            text-align: center;
+        }
+        #Angel:hover{
+            transform: scale(1.1);
+            box-shadow: 10px 20px 20px rgb(65, 65, 56);
+        }
+        img:hover{
+                box-shadow: 10px 10px 10px rgb(78, 74, 60);
+                transform: scale(1.1); /* Image ko zoom karein */
+                /* opacity: 1; */
+        }
+        img{
+            color: aqua;
+            height: 250px;
+            margin: 30px 30px 10px 20px;
+            object-position: center;
+            width: 80%;
+            object-fit: cover;
+            border-radius: 5px;
+            /* background-color: aqua; */
+        }
+        body{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            /* background-color: blue; */
+        }
+        button{
+            height: 30px;
+            width: 90px;
+            font-weight: bold;
+        }
+        h3{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="Angel">
+        <div><img src="yashi.jpeg" alt="angel"></div>
+        <h1>Angel Yashi</h1>
+        <h3>Stranger</h3>
+        <button>Add Friend</button>
+    </div>
+    
+</body>
+<script>
+    let btn = document.querySelector("button");
+    let tag = document.querySelector("h3");
+    let check = 0;
+    btn.addEventListener("click",function(){
+    if(check == 0){
+        tag.innerHTML="Friend";
+        tag.style.color="rgb(243, 176, 8)";
+        btn.innerHTML ="Remove";
+        check=1;
+    }else{
+        tag.innerHTML="Stranger";
+        tag.style.color="red";
+        btn.innerHTML ="Add Friend";
+        check = 0;
+        
+    }
+    })
+</script>
+</html>
